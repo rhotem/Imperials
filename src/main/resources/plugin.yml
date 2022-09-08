@@ -1,0 +1,8 @@
+name: Imperials
+version: '${project.version}'
+main: me.justacat.imperials.Imperials
+api-version: 1.17
+commands:
+  GetItem:
+    permission: op
+    usage: "/GetItem <ID>"
