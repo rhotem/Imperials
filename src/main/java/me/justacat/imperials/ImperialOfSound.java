@@ -18,6 +18,7 @@ import org.bukkit.util.Vector;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class ImperialOfSound extends CustomItem {
@@ -71,7 +72,9 @@ public class ImperialOfSound extends CustomItem {
 
                 }
 
-                location.getWorld().spawnParticle(Particle.NOTE, location, 200, 7, 0, 7, 0);
+                double random = ThreadLocalRandom.current().nextDouble(1, 4);
+
+                location.getWorld().spawnParticle(Particle.NOTE, location, 200, 3.5, 0, 3.5, 0);
 
                 location.getWorld().playSound(location.clone().add(vector), Sound.BLOCK_NOTE_BLOCK_PLING, 0.7F, (float) ((float) times / 45.0));
                 Collection<LivingEntity> collection = location.getNearbyLivingEntities(8, 8, 8);
