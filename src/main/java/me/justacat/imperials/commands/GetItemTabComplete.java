@@ -1,5 +1,6 @@
-package me.justacat.imperials;
+package me.justacat.imperials.commands;
 
+import me.justacat.imperials.RegisteredItems;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
